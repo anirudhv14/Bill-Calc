@@ -78,13 +78,37 @@ Here is an example of how you can use the Bill Splitter:
 5. **GST:** 5%
 6. **Service Charge:** 10%
 
-The application will then calculate and display how much each member should pay, taking into account their individual consumption, GST, and service charge.
-
+The application will then calculate and display how much each member should pay, taking into account their consumption, GST, and service charge.
 
 ## Contributing
 
-Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you would like to change.
+Feel free to contribute to this project by submitting issues or pull requests. For major changes, please open an issue first to discuss what you want to change.
 
 ## Contact
 
-For any questions or feedback, please reach out to [anirudhv2001@ymail.com](mailto:anirudhv2001@ymail.com).
+For any questions or feedback, please contact [anirudhv2001@ymail.com](mailto:anirudhv2001@ymail.com).
+
+## License
+```
+MIT License
+
+Copyright (c) 2024 Anirudh Vadakedath
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
