@@ -49,13 +49,13 @@ for i, item in enumerate(items):
         for j, member in enumerate(members):
             if consumed[j]:
                 members_share[j] += item_share_per_member
+        
+        # Display the per member share for each item
+        st.write(f"Per member share for {item['name']} is {item_share_per_member:.2f}")
 
     # Warn if no one has consumed the item
     if total_consumed_members == 0:
         st.warning(f"No members have consumed {item['name']}.")
-
-    # Display the per member share for each item
-    st.write(f"Per member share for {item['name']} is {item_share_per_member:.2f}")
 
 # GST Amount
 gst_amount = st.number_input("GST Amount (in %):", min_value=0, value=5, step=1)
