@@ -31,13 +31,31 @@ members_share = [0] * num_members  # Initialize the share for each member
 for i, item in enumerate(items):
     st.subheader(f"Share of {item['name']}")
     total_percentage = 0
-    for j,k in enumerate(members):
-        percentage = st.number_input(f"Percentage of {item['name']} paid by Member {k}", min_value=0, max_value=100, value=100, step=1, key=f"{i}-{j}")
-        members_share[j] += (percentage / 100) * item['cost']
-        total_percentage += percentage
+    total_consumed_members = 0
     
-    if total_percentage != 100:
-        st.warning(f"Total percentage for {item['name']} is not 100%! Current total is {total_percentage}%.")
+    # Initialize a list for member checkboxes
+    consumed = [False] * num_members
+
+    # Checkboxes for each member to indicate if they consumed the item
+    for j, member in enumerate(members):
+        consumed[j] = st.checkbox(f"Did {member} consume {item['name']}?", key=f"consumed_{i}_{j}")
+
+    # Calculate the total number of consumed members
+    total_consumed_members = sum(consumed)
+
+    # If there are consumed members, divide the cost equally among them
+    if total_consumed_members > 0:
+        item_share_per_member = item['cost'] / total_consumed_members
+        for j, member in enumerate(members):
+            if consumed[j]:
+                members_share[j] += item_share_per_member
+
+    # Warn if no one has consumed the item
+    if total_consumed_members == 0:
+        st.warning(f"No members have consumed {item['name']}.")
+
+    # Display the per member share for each item
+    st.write(f"Per member share for {item['name']} is {item_share_per_member:.2f}")
 
 # GST Amount
 gst_amount = st.number_input("GST Amount (in %):", min_value=0, value=5, step=1)
