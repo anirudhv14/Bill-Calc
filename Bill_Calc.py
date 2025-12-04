@@ -108,7 +108,9 @@ gst_amount = st.number_input("GST Amount (in %):", min_value=0.0, value=5.0, ste
 # SC Amount
 sc_amount = st.number_input("Service Charge Amount (in %):", min_value=0.0, value=0.0, step=0.01)
 
-total_share_with_tax = [i + i * gst_amount/100 + i * sc_amount/100 for i in members_share]
+disc_amount = st.number_input("Any Discount Amount (in %):", min_value=-100.0, value=0.0, step=0.01)
+
+total_share_with_tax = [i + i * gst_amount/100 + i * sc_amount/100 + i * disc_amount/100 for i in members_share]
 
 # Display the results
 st.header("Bill Split")
